@@ -1,0 +1,42 @@
+body
+{
+    perspective: 300px;
+}
+div
+{
+    width: 200px;
+    height: 300px;
+    margin: 80px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8S;
+}
+div:hover
+{
+    transform: rotateY(180deg);
+
+}
+.front-face
+{
+    background-color: royalblue;
+    font-size: 28px;
+    width: 200px;
+    height: 250px;
+    margin: 0px;
+    position: absolute;
+    backface-visibility: hidden;
+    z-index: -2;
+}
+.back-face
+{
+    transform: rotateY(180deg);
+
+    background-color: rgb(225, 129, 65);
+    width: 200px;
+    height: 250px;
+    margin: 0px;
+    font-size: 28px;
+    position: absolute;
+    z-index: 1;
+
+}
